@@ -68,8 +68,8 @@ let start = document.getElementById('start'),
 
 					 incomePlus.setAttribute('disabled', 'true');
 					 expensesPlus.setAttribute('disabled', 'true');
-					 start.style.display ='block';
-					 cancel.style.display = 'none';
+					 start.style.display ='none';
+					 cancel.style.display = 'block';
 
 						
 					this.budget = +salaryAmount.value;
@@ -115,7 +115,6 @@ let start = document.getElementById('start'),
 						if(itemExpenses !== '' && cashExpenses !== '') {
 							appData.expenses[itemExpenses] = +cashExpenses;
 						}
-						
 					});
 					
 				},
@@ -199,8 +198,8 @@ let start = document.getElementById('start'),
 					this.moneyDeposit = 0;
 					this.addExpenses = [];
 		
-					cancel.style.display = 'none';
-					start.style.display = 'block';
+					cancel.style.display = 'block';
+					start.style.display = 'none';
 					incomePlus.removeAttribute('disabled');
 					expensesPlus.removeAttribute('disabled');
 					getCheckBox.checked = false;
@@ -245,7 +244,7 @@ let start = document.getElementById('start'),
 					return  this.budgetMonth * periodSelect.value;
 				},
 			};
-			console.log(appData.getExpenses());
+			
 			start.addEventListener('click', appData.start.bind(appData));
 			expensesPlus.addEventListener('click' , appData.addExpensesBlock);
 			incomePlus.addEventListener('click' , appData.addIncomeBlock);
