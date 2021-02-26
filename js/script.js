@@ -92,11 +92,9 @@ let start = document.getElementById('start'),
 					targetMonthValue.value = this.getTargetMonth();
 					incomePeriodValue.value = this.calcPeriod();
 					// 
-					
 					periodSelect.addEventListener('input', function () {
 						incomePeriodValue.value = appData.calcPeriod();
 					});
-				
 				},
 				addExpensesBlock: function(){
 					let cloneExpensesItem = expensesItems[0].cloneNode(true);
@@ -118,12 +116,8 @@ let start = document.getElementById('start'),
 					});
 					
 				},
-				
 				addIncomeBlock: function () {
-					// 
 					let cloneIncomeItem = incomeItems[0].cloneNode(true);
-					cloneIncomeItem.querySelector('.expenses-title').value = '';
-					cloneIncomeItem.querySelector('.expenses-amount').value = '';
 					incomeItems[0].parentNode.insertBefore(cloneIncomeItem, incomePlus);
 					incomeItems = document.querySelectorAll('.income-items');
 					if(incomeItems.length === 3) {
@@ -198,8 +192,8 @@ let start = document.getElementById('start'),
 					this.moneyDeposit = 0;
 					this.addExpenses = [];
 		
-					cancel.style.display = 'block';
-					start.style.display = 'none';
+					cancel.style.display = 'none';
+					start.style.display = 'block';
 					incomePlus.removeAttribute('disabled');
 					expensesPlus.removeAttribute('disabled');
 					getCheckBox.checked = false;
